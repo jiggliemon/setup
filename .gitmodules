@@ -1,0 +1,15 @@
+[submodule "packages/vim-colors-solarized"]
+	path = packages/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "packages/gitflow"]
+	path = packages/gitflow
+	url = https://github.com/nvie/gitflow.git
+[submodule "packages/node"]
+	path = packages/node
+	url = https://github.com/joyent/node.git
+[submodule "packages/npm"]
+	path = packages/npm
+	url = https://github.com/isaacs/npm.git
+[submodule "packages/git-flow-completion"]
+	path = packages/git-flow-completion
+	url = https://github.com/bobthecow/git-flow-completion.git
