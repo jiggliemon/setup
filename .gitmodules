@@ -13,3 +13,6 @@
 [submodule "packages/git-flow-completion"]
 	path = packages/git-flow-completion
 	url = https://github.com/bobthecow/git-flow-completion.git
+[submodule "packages/nvm"]
+	path = packages/nvm
+	url = git://github.com/creationix/nvm.git
