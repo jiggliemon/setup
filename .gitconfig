@@ -1,0 +1,5 @@
+[user]
+    name = Chase Wilson
+    email = chase@agroism.com
+[core]
+    excludesfile = /home/chase/.gitignore

@@ -93,6 +93,7 @@ __set_path LD_LIBRARY_PATH "$(__form_paths lib)"
 
 # set rvm path if it exists
 [ -d $HOME/bin ] && __set_path PATH "$HOME/bin"
+[ -d /usr/local/lib/node ] && __set_path "/usr/local/lib/node"
 [ -d $HOME/local/bin ] && __set_path PATH "$HOME/local/bin"
 [ -d $HOME/local/node/bin ] && __set_path PATH "$HOME/local/node/bin"
 [ -d $HOME/lib/node_modules/.bin ] && __set_path PATH "$HOME/lib/node_modules/.bin"
@@ -227,10 +228,9 @@ echo "         "
 DIR=${PWD/$HOME/\~}
 echo -ne "\033]0;$(__git_ps1 "%s - " 2>/dev/null)$HOSTNAME:$DIR\007"
 # Git Branch Notification
-echo -ne "\033[40;37m$USER@$(uname -n):$(__git_ps1 "\033[33m %s \033[0m" 2>/dev/null)"'
+echo -ne "\033[0;37m$USER@$(uname -n):$(__git_ps1 "\033[0;33m %s \e[0;0m" 2>/dev/null)"'
 #this part gets repeated when you tab to see options
-PS1='\n\w \[\e[36m\]\t\[\e[m\] \\$ '
-
+PS1='\n\w \[\033[36m\]\t\[\e[m\] \\$ '
 
 # shorthand for checking on ssh agents.
 sshagents () {
