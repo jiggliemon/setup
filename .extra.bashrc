@@ -228,7 +228,7 @@ echo "         "
 DIR=${PWD/$HOME/\~}
 echo -ne "\033]0;$(__git_ps1 "%s - " 2>/dev/null)$HOSTNAME:$DIR\007"
 # Git Branch Notification
-echo -ne "\033[0;37m$USER@$(uname -n):$(__git_ps1 "\033[0;33m %s \e[0;0m" 2>/dev/null)"'
+echo -ne "\033[0;37m$USER@$(uname -n):$(__git_ps1 "\e[0;33m %s \e[0;0m" 2>/dev/null)"'
 #this part gets repeated when you tab to see options
 PS1='\n\w \[\033[36m\]\t\[\e[m\] \\$ '
 
