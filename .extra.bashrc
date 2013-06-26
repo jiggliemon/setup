@@ -93,7 +93,7 @@ __set_path LD_LIBRARY_PATH "$(__form_paths lib)"
 
 # set rvm path if it exists
 [ -d $HOME/bin ] && __set_path PATH "$HOME/bin"
-[ -d /usr/local/lib/node ] && __set_path "/usr/local/lib/node"
+#[ -d /usr/local/lib/node ] && __set_path "/usr/local/lib/node"
 [ -d $HOME/local/bin ] && __set_path PATH "$HOME/local/bin"
 [ -d $HOME/local/node/bin ] && __set_path PATH "$HOME/local/node/bin"
 [ -d $HOME/lib/node_modules/.bin ] && __set_path PATH "$HOME/lib/node_modules/.bin"
@@ -179,6 +179,8 @@ alias lg="$ls_cmd -Flash | grep --color"
 # wget curl replacement
 alias wget="curl -O"
 
+alias mysql=/usr/local/mysql-5.5.24-osx10.6-x86_64/bin/mysql
+
 # fail if the file is not an executable in the path.
 inpath () {
   ! [ $# -eq 1 ] && echo "usage: inpath <file>" && return 1
@@ -198,7 +200,7 @@ editprof () {
   if [ "$1" != "" ]; then
     s="_$1"
   fi
-  $EDITOR $HOME/.extra$s.bashrc
+  $EDITOR $HOME/.extras.bashrc
   prof
 }
 
