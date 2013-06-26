@@ -1,6 +1,0 @@
-#!/bin/bash
-
-PACKAGE=$1
-CURRENT=`pwd`
-
-echo $PACKAGE
