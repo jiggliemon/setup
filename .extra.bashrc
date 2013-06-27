@@ -131,12 +131,12 @@ export HISTFILESIZE=1000000000
 
 
 # grep=grep
- if [ "$(grep --help | grep color)" != "" ]; then
-   grep="grep --color"
- elif [ "$(grep --help | grep colour)" != "" ]; then
-   grep="grep --colour"
- fi
- alias grep="$grep"
+# if [ "$(grep --help | grep color)" != "" ]; then
+#   grep="grep --color"
+# elif [ "$(grep --help | grep colour)" != "" ]; then
+#   grep="grep --colour"
+# fi
+# alias grep="$grep"
 
 export SVN_RSH=ssh
 export RSYNC_RSH=ssh
