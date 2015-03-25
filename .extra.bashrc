@@ -23,8 +23,13 @@ main () {
 # fi
 
 # Thanks to "allan" in irc://irc.freenode.net/#textmate for knowing this!
+
 echo "loading bash extras..."
 
+# Docker env stuff
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/chase/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
 
 # try to avoid polluting the global namespace with lots of garbage.
 # the *right* way to do this is to have everything inside functions,
@@ -88,16 +93,16 @@ __form_paths () {
   echo ${paths/:/} # remove the first :
 }
 #Add directories to the PATH if they exist
-__set_path PATH "$(__form_paths):/opt/local/bin:/opt/local/sbin"
+__set_path PATH "$(__form_paths):/usr/local/sbin:/opt/local/bin:/opt/local/sbin"
 __set_path LD_LIBRARY_PATH "$(__form_paths lib)"
 
-# set rvm path if it exists
 [ -d $HOME/bin ] && __set_path PATH "$HOME/bin"
 #[ -d /usr/local/lib/node ] && __set_path "/usr/local/lib/node"
 [ -d $HOME/local/bin ] && __set_path PATH "$HOME/local/bin"
 [ -d $HOME/local/node/bin ] && __set_path PATH "$HOME/local/node/bin"
 [ -d $HOME/lib/node_modules/.bin ] && __set_path PATH "$HOME/lib/node_modules/.bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[ -d /opt/apache-maven-3.2.2/bin ] && __set_path PATH "/opt/apache-maven-3.2.2/bin"
 
 # Use UTF-8, and throw errors in PHP and Perl if it's not available.
 # Note: this is VERY obnoxious if UTF8 is not available!
@@ -178,8 +183,6 @@ alias lg="$ls_cmd -Flash | grep --color"
 
 # wget curl replacement
 alias wget="curl -O"
-
-alias mysql=/usr/local/mysql-5.5.24-osx10.6-x86_64/bin/mysql
 
 # fail if the file is not an executable in the path.
 inpath () {

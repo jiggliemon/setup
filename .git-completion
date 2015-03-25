@@ -118,11 +118,12 @@ __git_ps1 ()
                       -e 's|^git\.||' \
                       -e 's|\.git$||' \
                       -e 's|^github:|gh:|' \
+                      -e 's|^oraclecorp:|O:|' \
                       -e 's|^nodejs.org:~/|n:|' \
               -e 's|^https?://github.com/|gh:|' \
+              -e 's|^https?://alm.oraclecorp.com/|O:|' \
                       -e 's|^joyent:|j:|' \
                       -e 's|^node@|n:|' \
-                      -e 's|:isaacs/|:|' \
                       -e 's|.no.de:repo$||' \
                 2>/dev/null )
         then
