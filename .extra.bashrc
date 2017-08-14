@@ -26,11 +26,6 @@ main () {
 
 echo "loading bash extras..."
 
-# Docker env stuff
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/chase/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
 # try to avoid polluting the global namespace with lots of garbage.
 # the *right* way to do this is to have everything inside functions,
 # and use the "local" keyword.  But that would take some work to
