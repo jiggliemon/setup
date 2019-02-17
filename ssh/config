@@ -1,0 +1,22 @@
+Host github github.com
+Hostname github.com
+IdentityFile ~/.ssh/id_rsa
+
+
+Host oracle alm.oraclecorp.com
+Hostname alm.oraclecorp.com
+IdentityFile ~/.ssh/id_rsa_o
+
+Host orahub orahub.oraclecorp.com
+Hostname orahub.oraclecorp.com
+IdentityFile ~/.ssh/id_rsa_o
+
+Host gitlab gitlab.com
+Hostname gitlab.com
+IdentityFile ~/.ssh/id_rsa_o
+
+Host brmopc-x5-2-9
+IdentityFile ~/.ssh/id_rsa_o
+
+Host brmopc-x5-2-10
+IdentityFile ~/.ssh/id_rsa_o
